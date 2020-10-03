@@ -30,10 +30,7 @@ sudo apt-get update -y 2>/dev/null
 echo "25"
 echo "# Upgrading the OS." ; sleep 2
 # Command for second task goes on this line.
-zenity --warning \
-	--title="Supdate AUP" \
-	--width=250 \
-	--text="This Sup Mod actually can't be upgrade. Apology for the inconvenience"
+sudo apt-get upgrade -y 2>/dev/null
 # =================================================================
 echo "50"
 echo "# Show an AD." ; sleep 2
@@ -65,10 +62,8 @@ echo "100"
 
 ) |
 zenity --progress \
-  --title="Progress Status" \
+  --title="Supbuntu AUP" \
   --text="First Task." \
   --percentage=0 \
   --auto-close \
   --auto-kill
-
-(( $? != 0 )) && zenity --error --text="Error in SupCMD."
